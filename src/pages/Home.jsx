@@ -13,14 +13,7 @@ function Home() {
     async function kayneRest() {
         try {
             var response = await fetch('https://api.kanye.rest/')
-        var data = await response.json()
-
-        if (data && data.quote) {
-            var dataMap = [{ frase: data.quote }]
-            console.log(dataMap)
-        } else {
-            console.log("Erro ao obter citações")
-        }
+            var data = await response.json()
 
         setRest(data)
         } catch (error) {
@@ -28,8 +21,6 @@ function Home() {
         }
         
     }
-
-
 
     return (
         <div className={css.div}>
